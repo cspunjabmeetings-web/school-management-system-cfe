@@ -8,7 +8,7 @@ const {
   getStudentById,
   updateStudent,
   deleteStudent,
-} = require("../../controllers/studentController");
+} = require("../../controllers/StudentController");
 
 const {
   createFeeType,

@@ -3,7 +3,7 @@
 const { Sequelize } = require("sequelize");
 require("dotenv").config();
 
-const databaseUrl = process.env.DATABASE_URL;
+const databaseUrl = process.env.DATABASE_URL || "sqlite:./database.sqlite";
 console.log("Database URL:", databaseUrl);
 
 const sequelize = new Sequelize(databaseUrl, {
