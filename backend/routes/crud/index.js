@@ -2,6 +2,28 @@ const express = require("express");
 const router = express.Router();
 const asyncHandler = require("../utils/asyncHandler");
 
+// Index route for /api/crud - lists available endpoints
+router.get("/", (req, res) => {
+  res.json({
+    message: "Available CRUD endpoints",
+    endpoints: [
+      { method: "GET", path: "/api/crud/students" },
+      { method: "POST", path: "/api/crud/students" },
+      { method: "GET", path: "/api/crud/students/:id" },
+      { method: "PUT", path: "/api/crud/students/:id" },
+      { method: "DELETE", path: "/api/crud/students/:id" },
+      { method: "GET", path: "/api/crud/fee-types" },
+      { method: "POST", path: "/api/crud/fee-types" },
+      { method: "GET", path: "/api/crud/fee-structures" },
+      { method: "POST", path: "/api/crud/fee-structures" },
+      { method: "GET", path: "/api/crud/academic-years" },
+      { method: "POST", path: "/api/crud/academic-years" },
+      { method: "POST", path: "/api/crud/fee-invoices/generate-monthly" },
+      { method: "POST", path: "/api/crud/fee-invoices/generate-annual" }
+    ],
+  });
+});
+
 const {
   createStudent,
   getAllStudents,
