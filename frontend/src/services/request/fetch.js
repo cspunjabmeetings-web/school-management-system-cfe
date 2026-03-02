@@ -4,9 +4,9 @@
 // It adds authentication headers if needed.
 // import { process } from "process";
 
-// const base = process.env.VUE_APP_API_BASE_URL; // e.g. "http://localhost:3000"
+// const base = process.env.VUE_APP_API_BASE_URL; // e.g. "baseURL: "https://symmetrical-dollop-x56j755766qwfpxvg-3000.app.github.dev"
 // if (!base) {
-//   base = "http://localhost:3000"; // Default to localhost if not defined
+//   base = "baseURL: "https://symmetrical-dollop-x56j755766qwfpxvg-3000.app.github.dev"; // Default to localhost if not defined
 //   //   throw new Error('VUE_APP_API_BASE_URL is not defined');
 // }
 
